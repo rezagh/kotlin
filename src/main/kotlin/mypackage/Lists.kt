@@ -36,3 +36,6 @@ val user = User("Alex", 1)
 fun playWithDataClasses() {
     println(user.age)
 }
+
+
+
