@@ -1,21 +1,24 @@
 
-package basics
+package mypackage
 
 
 fun main() {
     var street: Int = 1 //create a var. this is NOT a dynamic type. its a mutable var
     var num: String = "xx"
-    var xx = "xxx" //inters the type
+    var xx = "xxx" //infers the type
 
     val xyz = 1 //immuatable variable.
 
     //var is mutable val is immutable
 
-    testFunctions(firstname = "reza")
+
+    elivsTest(null)
 }
 
-fun ifelse (name:String){
-    //if-else doesnt need return. it has it in built
+//if-else doesn't need return. it has it inbuilt
+//? makes it nullable
+//implicit return type
+fun ifelseFunction (name:String?){
     if (name == null)
         "abc"
     else name
@@ -23,28 +26,34 @@ fun ifelse (name:String){
 
 //elvis symbol
 //If the expression to the left of ?: is not null, the Elvis operator returns it, otherwise it returns the expression to the right
-fun elivs(name : String?){
-    val v1 = ""
-    val v2 = ""
-    val r1 = v1?.length ?: -1
-    val r2 = v2 ?: v2
+fun elivsTest(name : String?){
+    val v1 = "v1"
+    val v2 = "v2"
+    val v3 = null
+
+    val r1 = v1 ?: v1
+    println(r1) // what does this print?
+
+    val r2 = v1?.length ?: -1
+    println(r2) // what does this print?
+
+
+    val r3 = v3 ?: -1
+    println(r3) // what does this print?
+
 }
 
-//default value
-fun testFunctions(firstname:String, lastname: String ="ghafari") {
-    println("$firstname $lastname")
-}
-
-//any return type
-fun testReturns(input: Integer): Any{
+//any return type. Any is the root of the Kotlin class hierarchy. Every Kotlin class has Any as a superclass. It is equivalent to Object in Java.  When a function is declared to return Any, it means that the function can return a value of any type
+fun testAnyReturn(input: Integer): Any{
     if (input.equals(1))
         return "aa"
     return 0
 }
 
 
-class Test(val abc : String){
-    var name = ""
+//class definition. variable name is the property of the class and is immutable but address is mutable property
+class Customer(val name : String){
+    var address = ""
     fun xx(){}
 }
 
