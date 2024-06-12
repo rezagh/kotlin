@@ -7,6 +7,7 @@ fun main() {
     printSomething()
 }
 
+//println("hello world") -- can i put this here? no, it has to be inside a function or class.
 
 //defining a function. with a default parameter
 fun printSomething(name: String = "some name"){
