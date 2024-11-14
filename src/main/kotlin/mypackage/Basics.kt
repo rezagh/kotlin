@@ -18,8 +18,8 @@ fun main() {
 //if-else doesn't need return. it has it inbuilt
 //? makes it nullable
 //implicit return type
-fun ifelseFunction (name:String?) : String{
-    if (name == null)
+fun ifelseFunction (name:String?): String {
+    return if (name == null)
         "abc"
     else name
 }
@@ -34,7 +34,7 @@ fun elivsTest(name : String?){
     val r1 = v1 ?: v2
     println(r1) // what does this print?
 
-    val r2 = v1?.length ?: -1
+    val r2 = v2?.length ?: -1
     println(r2) // what does this print?
 
 
