@@ -9,7 +9,7 @@ fun main() {
  */
 fun playWithLists() {
     var imList = listOf<String>("a", "b") // immutable
-    var mList = mutableListOf("a","b") //mutable
+    var mList = mutableListOf("a", "b") //mutable
 
 
     arrayOf("") //mutable always
@@ -22,8 +22,8 @@ fun playWithLists() {
     for (i in 1..2) {
         println(i)
     }
-}
 
+}
 
 /*
 a data class is a class that is primarily used to hold data. similiar to java dto
